@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "763894989418",
+    "project_id": "whatsapp-india-88bed",
+    "storage_bucket": "whatsapp-india-88bed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763894989418:android:9caf15fb3827b435ec4013",
+        "android_client_info": {
+          "package_name": "com.chatindia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763894989418-5g4tencjnajhdodf2v0culpipkjl0kde.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.chatindia",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "763894989418-7khlnp0968dv0hjausvbuv52g00phetn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXieROWNS8DUMh01KEIjDkM-PZ-KY3PwA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763894989418-7khlnp0968dv0hjausvbuv52g00phetn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
