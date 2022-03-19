@@ -1,5 +1,5 @@
 import React from 'react';
-import { LogBox,View,Text } from 'react-native';
+import { LogBox,View,Text,DeviceEventEmitter } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
@@ -13,6 +13,7 @@ import Calls from './src/screens/Calls/Calls';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icons from 'react-native-vector-icons/Entypo';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import Camera from './src/screens/Camera/Camera';
 
 
 LogBox.ignoreLogs(['react-native-gesture-handler']);
@@ -25,7 +26,14 @@ const ChatsIcon = (icon) => {
     )
 }
 
-const MainRoutes = () => {
+const MainRoutes = ({navigation}) => {
+
+    React.useEffect(() => {
+        DeviceEventEmitter.addListener("event.navigate", (route) => navigation.navigate(route));
+        return () => {
+            DeviceEventEmitter.removeAllListeners("event.navigate");
+        }
+    },[]);
     return(
         <>
         <View style={{padding:15, display:'flex', flexDirection:'row', justifyContent:'space-between', backgroundColor:'white'}}>
@@ -40,9 +48,11 @@ const MainRoutes = () => {
             </View>
         </View>
         <TopTabNavigator.Navigator>
-        <TopTabNavigator.Screen name="Chats" component={Chats} options={{tabBarIcon:()  => ChatsIcon('message'),tabBarItemStyle:{display:'flex',flexDirection:'row'}}}  />
-        <TopTabNavigator.Screen name="Status" component={Status} options={{tabBarIcon: () => ChatsIcon('whatshot'),tabBarItemStyle:{display:'flex',flexDirection:'row'}}} />
-        <TopTabNavigator.Screen name="Calls" component={Calls} options={{tabBarIcon: () => ChatsIcon('call'),tabBarItemStyle:{display:'flex',flexDirection:'row'}}} />
+        <TopTabNavigator.Screen name="Chats" component={Chats} options={{tabBarIcon:()  => ChatsIcon('message'),tabBarItemStyle:{display:'flex',flexDirection:'row'}, tabBarIndicatorStyle:{backgroundColor:'#075E54'}}}  />
+
+        <TopTabNavigator.Screen name="Status" component={Status} options={{tabBarIcon: () => ChatsIcon('whatshot'),tabBarItemStyle:{display:'flex',flexDirection:'row'},tabBarIndicatorStyle:{backgroundColor:'#075E54'}}} />
+
+        <TopTabNavigator.Screen name="Calls" component={Calls} options={{tabBarIcon: () => ChatsIcon('call'),tabBarItemStyle:{display:'flex',flexDirection:'row'},tabBarIndicatorStyle:{backgroundColor:'#075E54'}}} />
         </TopTabNavigator.Navigator>
         </>
     )
@@ -66,7 +76,10 @@ const Routes = () => {
                 }
                 {
                     currentUser && 
+                    <>
                     <Stack.Screen name="Home" component={MainRoutes} options={{headerShown:false}} />
+                    <Stack.Screen name="Camera" component={Camera} options={{headerShown:false}} />
+                    </>
                 }
             </Stack.Navigator>
         </NavigationContainer>
