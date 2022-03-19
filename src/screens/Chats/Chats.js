@@ -26,39 +26,39 @@ const ChatItems = ({item:{id,name,lastmsg,image}}) => {
 const data=[
     {
         id:1,
-        image:"https://i.pinimg.com/736x/64/81/22/6481225432795d8cdf48f0f85800cf66.jpg",
-        name:"Permnent Roommates",
-        lastmsg:"Abhishek: :) :)"
+        image:"https://www.oneindia.com/politicians/image/302x100x402x1/yogi-adityanath-36200.jpg",
+        name:"Yogi ji",
+        lastmsg:"Yogi ji: Jai Shree Ram"
     },
     {
         id:2,
-        image:"",
+        image:"https://i.pinimg.com/736x/9c/34/43/9c3443699319d60f00cefeff6674df97.jpg",
         name:"Ankit",
         lastmsg:"Ankit: hey"
     },
     {
         id:3,
-        image:"",
-        name:"Bholu (BTC)",
-        lastmsg:"Bholu: all right :)"
+        image:"https://img.etimg.com/thumb/msid-53900279,width-1200,height-900,imgsize-185438,overlay-economictimes/photo.jpg",
+        name:"Modi ji",
+        lastmsg:"Modi ji: sab changa c"
     },
     {
         id:4,
-        image:"https://i.pinimg.com/736x/64/81/22/6481225432795d8cdf48f0f85800cf66.jpg",
-        name:"Permnent Roommates",
-        lastmsg:"Abhishek: :) :)"
+        image:"https://upload.wikimedia.org/wikipedia/commons/3/3f/Shri_Amit_Shah_taking_charge_as_the_Union_Minister_for_Home_Affairs%2C_in_New_Delhi_on_June_01%2C_2019.jpg",
+        name:"Amit Shah",
+        lastmsg:"Amit Shah: uthwa lenge usko"
     },
     {
         id:5,
-        image:"",
-        name:"Ankit",
-        lastmsg:"Ankit: hey"
+        image:"https://static.toiimg.com/thumb/msid-69591643,width-1200,height-900,resizemode-4/.jpg",
+        name:"Aman",
+        lastmsg:"Aman: hey"
     },
     {
         id:6,
-        image:"",
-        name:"Bholu (BTC)",
-        lastmsg:"Bholu: all right :)"
+        image:"https://i.pinimg.com/736x/2d/76/3f/2d763f275d851ddb99b9aa2c4ba0577a.jpg",
+        name:"Shekhar",
+        lastmsg:"Shekhar: all right :)"
     },
     {
         id:7,
@@ -68,12 +68,30 @@ const data=[
     },
     {
         id:8,
-        image:"",
+        image:"https://i.pinimg.com/736x/9c/34/43/9c3443699319d60f00cefeff6674df97.jpg",
         name:"Ankit",
         lastmsg:"Ankit: hey"
     },
     {
         id:9,
+        image:"",
+        name:"Bholu (BTC)",
+        lastmsg:"Bholu: all right :)"
+    },
+    {
+        id:10,
+        image:"https://i.pinimg.com/736x/64/81/22/6481225432795d8cdf48f0f85800cf66.jpg",
+        name:"Permnent Roommates",
+        lastmsg:"Abhishek: :) :)"
+    },
+    {
+        id:11,
+        image:"https://i.pinimg.com/736x/9c/34/43/9c3443699319d60f00cefeff6674df97.jpg",
+        name:"Ankit",
+        lastmsg:"Ankit: hey"
+    },
+    {
+        id:12,
         image:"",
         name:"Bholu (BTC)",
         lastmsg:"Bholu: all right :)"
